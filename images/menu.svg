@@ -1,7 +1,10 @@
 <svg version="1.1"
-     width="500" height="500"
-     xmlns="http://www.w3.org/2000/svg">
-    <rect x="20" y="60" width="460" height="60" rx="30" />
-    <rect x="20" y="220" width="460" height="60" rx="30" />
-    <rect x="20" y="380" width="460" height="60" rx="30" />
+     width="20" height="20"
+     viewBox="0 0 500 500"
+     xmlns="http://www.w3.org/2000/svg"
+     stroke="black"
+     stroke-width="30">
+    <line x1="20" y1="60" x2="460" y2="60"/>
+    <line x1="20" y1="220" x2="460" y2="220" />
+    <line x1="20" y1="380" x2="460" y2="380" />
   </svg>
