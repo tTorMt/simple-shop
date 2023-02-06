@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
   margin: 0;
   min-width: 362px;
   font-family: Open Sans, Arial, sans-serif;
@@ -107,6 +107,7 @@ main {
   position: absolute;
   top: 45%;
   width: 10%;
+  border-radius: 10px;
 }
 
 .promo .right-arrow {
@@ -119,7 +120,7 @@ main {
 
 .promo .left-arrow:hover, .promo .right-arrow:hover {
   background-color: rgba(255,255,255,0.3);
-  border-radius: 10px;
+  
 }
 
 /* categories */
@@ -140,9 +141,9 @@ main {
   transition: all 0.5s ease;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 600px) {
   .category {
-    flex: 0 0 29.3%;
+    flex: 0 0 21%;
   }
   
 }
