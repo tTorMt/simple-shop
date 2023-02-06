@@ -169,5 +169,85 @@ main {
   cursor: pointer;
 }
 
+/* hot items */
 
+.hot-items {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
+}
 
+.hot-item {
+  display: block;
+  width: 160px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  align-items: center;
+  line-height: 2rem;
+  margin: 10px;
+  background-color: rgb(206, 206, 212);
+  outline: 3px solid white;
+  transition: all 1s ease;
+  flex: 0 0 160px;
+}
+
+.hot-item:hover {
+  background-color: aliceblue;
+  outline: 3px solid rgb(133, 89, 158);
+}
+
+.hot-item img {
+  width: 60%;
+}
+
+.old-price {
+  padding: 0 10%;
+  align-self: start;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgb(189, 188, 188);
+  border-radius: 30px 0;
+  position: relative;
+}
+
+.old-price:before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  width: 100%;
+  left: 10%;
+  background-color: #9d9d9d;
+}
+
+.new-price {
+  font-size: 2rem;
+}
+
+.hot-item figcaption:hover, .hot-item img:hover {
+  cursor: pointer;
+}
+
+.hot-items .left-arrow, .hot-items .right-arrow {
+  position: absolute;
+  width: 50px;
+  cursor: pointer;
+}
+
+.hot-items .left-arrow:hover, .hot-items .right-arrow:hover {
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 10px;
+}
+
+.hot-items .left-arrow {
+  left: 5px;
+}
+
+.hot-items .right-arrow {
+  right: 5px;
+}
