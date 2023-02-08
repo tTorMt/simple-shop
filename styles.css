@@ -251,3 +251,43 @@ main {
 .hot-items .right-arrow {
   right: 5px;
 }
+
+/* social media */
+
+footer {
+  background-color: rgb(133, 89, 158);
+}
+
+footer svg {
+  margin: 0 10px;
+}
+
+footer svg:hover {
+  cursor: pointer;
+}
+
+svg #youtube-color, #vk-color, #telegram {
+  transition: fill 0.5s ease;
+  fill: grey;
+}
+
+svg:hover #youtube-color {
+  fill: #f00;
+}
+
+svg:hover #vk-color {
+  fill: #4c75a3;
+}
+
+svg:hover #telegram {
+  fill: #38b0e3;
+}
+
+footer .social-media {
+  height: 100px;
+  margin: 0 20px;
+  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
