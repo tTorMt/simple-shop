@@ -31,7 +31,7 @@ header {
   line-height: 30px;
   text-align: center;
   float: left;
-  background-color: rgb(107, 107, 180);
+  background-color: rgb(133, 89, 158);
   color:aliceblue;
   margin: 9px 9px 9px 20px;
   font-size: 0.8em;
@@ -73,7 +73,7 @@ adress {
   justify-content: space-between;
   padding: 10px;
   color: white;
-  background-color: rgb(107, 107, 180);
+  background-color: rgb(133, 89, 158);
 }
 
 /* navigation */
@@ -120,7 +120,6 @@ main {
 
 .promo .left-arrow:hover, .promo .right-arrow:hover {
   background-color: rgba(255,255,255,0.3);
-  
 }
 
 /* categories */
@@ -284,10 +283,34 @@ svg:hover #telegram {
 }
 
 footer .social-media {
-  height: 100px;
-  margin: 0 20px;
+  height: 50px;
   border-bottom: 1px solid grey;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 20px;
+}
+
+ul.info {
+  list-style: none;
+  margin: 10px 20px;
+  padding: 0;
+  text-transform: uppercase;
+  color: white;
+  border-bottom: 1px solid grey;
+}
+
+ul.info li {
+  margin: 10px;
+}
+
+ul.info li span {
+  float: right;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.copyright {
+  padding: 10px;
+  color: white;
 }
