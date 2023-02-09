@@ -236,11 +236,11 @@ main {
   position: absolute;
   width: 50px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .hot-items .left-arrow:hover, .hot-items .right-arrow:hover {
   background-color: rgba(255,255,255,0.6);
-  border-radius: 10px;
 }
 
 .hot-items .left-arrow {
@@ -251,7 +251,7 @@ main {
   right: 5px;
 }
 
-/* social media */
+/* footer */
 
 footer {
   background-color: rgb(133, 89, 158);
@@ -292,12 +292,13 @@ footer .social-media {
 }
 
 ul.info {
+  max-width: 960px;
   list-style: none;
-  margin: 10px 20px;
-  padding: 0;
+  margin: 10px auto;
+  padding: 0 20px;
   text-transform: uppercase;
   color: white;
-  border-bottom: 1px solid grey;
+
 }
 
 ul.info li {
@@ -313,4 +314,34 @@ ul.info li span {
 .copyright {
   padding: 10px;
   color: white;
+  border-top: 1px solid grey;
+  margin: 0 20px;
+}
+
+.info li ul {
+  list-style: none;
+  text-transform: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.info li ul li {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  .info li ul {
+    display: unset;
+  }
+
+  ul.info li span {
+    display: none;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-around;
+  }
 }
