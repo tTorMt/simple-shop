@@ -17,6 +17,8 @@ body {
 
 /* Header css */
 header {
+  max-width: 1300px;
+  margin: 0 auto;
   height: 48px;
   position: sticky;
   top: 0;
@@ -33,7 +35,7 @@ header {
   flex: 1;
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  padding-left: 10px;
   justify-content: start;
 }
 
@@ -161,7 +163,8 @@ nav {
 
 /* main */
 main {
-  max-width: 960px;
+  padding: 0 10px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 /* advertizing */
@@ -370,7 +373,7 @@ footer .social-media {
 }
 
 ul.info {
-  max-width: 960px;
+  max-width: 1300px;
   list-style: none;
   margin: 10px auto;
   padding: 0 20px;
@@ -390,10 +393,17 @@ ul.info li span {
 }
 
 .copyright {
-  padding: 10px;
+  
   color: white;
   border-top: 1px solid grey;
   margin: 0 20px;
+}
+
+.copyright p {
+  box-sizing: border-box;
+  max-width: 1300px;
+  padding: 0 10px;
+  margin: 10px auto;
 }
 
 .info li ul {
