@@ -134,9 +134,7 @@ form.search {
     display: flex;
   }
 
-  .left-part {
-    justify-content: center;
-  }
+
 }
 
 .services img {
@@ -369,21 +367,25 @@ footer .social-media {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 20px;
+  margin: 0;
 }
 
 ul.info {
   max-width: 1300px;
   list-style: none;
   margin: 10px auto;
-  padding: 0 20px;
+  padding: 0 10px;
   text-transform: uppercase;
   color: white;
 
 }
 
 ul.info li {
-  margin: 10px;
+  margin: 10px 0;
+}
+
+ul.info li:first-child {
+  margin-left: 0;
 }
 
 ul.info li span {
@@ -393,10 +395,8 @@ ul.info li span {
 }
 
 .copyright {
-  
   color: white;
   border-top: 1px solid grey;
-  margin: 0 20px;
 }
 
 .copyright p {
@@ -420,6 +420,11 @@ ul.info li span {
 }
 
 @media (min-width: 700px) {
+
+  .info li {
+    margin: 10px 10px;
+  }
+
   .info li ul {
     display: unset;
   }
@@ -430,6 +435,6 @@ ul.info li span {
 
   .info {
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
   }
 }
