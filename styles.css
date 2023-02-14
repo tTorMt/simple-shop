@@ -316,6 +316,8 @@ main {
   width: 50px;
   cursor: pointer;
   border-radius: 10px;
+  background-color: rgba(124, 124, 124, 0.3);
+  transition: all 0.5s ease;
 }
 
 .hot-items .left-arrow:hover, .hot-items .right-arrow:hover {
@@ -323,11 +325,11 @@ main {
 }
 
 .hot-items .left-arrow {
-  left: 5px;
+  left: 0;
 }
 
 .hot-items .right-arrow {
-  right: 5px;
+  right: 0;
 }
 
 /* footer */
@@ -421,8 +423,8 @@ ul.info li span {
 
 @media (min-width: 700px) {
 
-  .info li {
-    margin: 10px 10px;
+  ul.info>li {
+    margin: 10px 5%;
   }
 
   .info li ul {
