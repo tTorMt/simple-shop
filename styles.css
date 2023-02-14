@@ -111,6 +111,7 @@ form.search {
   background-color: rgb(133, 89, 158);
   cursor: pointer;
   transition: all 0.5s ease;
+  padding: 0;
 }
 
 .search button:hover {
@@ -243,7 +244,7 @@ main {
 }
 
 .category {
-  outline: 1px solid grey;
+  border: 1px solid grey;
   position: relative;
   margin: 0;
   padding: 0;
@@ -303,14 +304,14 @@ main {
   line-height: 2rem;
   margin: 10px;
   background-color: rgb(206, 206, 212);
-  outline: 3px solid white;
+  border: 3px solid white;
   transition: all 1s ease;
   flex: 0 0 160px;
 }
 
 .hot-item:hover {
   background-color: aliceblue;
-  outline: 3px solid rgb(133, 89, 158);
+  border: 3px solid rgb(133, 89, 158);
 }
 
 .hot-item img {
