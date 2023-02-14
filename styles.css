@@ -1,4 +1,4 @@
-@import url('fonts/opensans.css');
+@import url("fonts/opensans.css");
 
 * {
   box-sizing: border-box;
@@ -26,7 +26,7 @@ header {
 }
 
 .heading {
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   height: 48px;
   display: flex;
 }
@@ -61,7 +61,7 @@ header {
   line-height: 30px;
   text-align: center;
   background-color: rgb(133, 89, 158);
-  color:aliceblue;
+  color: aliceblue;
   font-size: 0.8em;
   font-family: Permanent Marker, Arial, serif;
   transition: all 1s ease;
@@ -96,7 +96,7 @@ form.search {
   border: none;
   font-size: 1em;
   padding: 0 10px;
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   transition: all 0.5s ease;
 }
 
@@ -109,7 +109,7 @@ form.search {
   flex: 0 0 70px;
   border: none;
   background-color: rgb(133, 89, 158);
-  cursor: pointer;  
+  cursor: pointer;
   transition: all 0.5s ease;
 }
 
@@ -133,8 +133,6 @@ form.search {
   form.search {
     display: flex;
   }
-
-
 }
 
 .services img {
@@ -158,13 +156,47 @@ adress {
 nav {
   display: none;
 }
+@media screen and (min-width: 1000px) {
+  nav {
+    display: unset;
+    width: 230px;
+    grid-row-start: span 2;
+  }
 
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    transition: all 1s ease;
+    font-size: 1.5em;
+    font-weight: 300;
+    background-color: lightgray;
+  }
+
+  nav li:hover {
+    background-color: rgb(133, 89, 158);
+    color: white;
+    cursor: pointer;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+  }
+}
 /* main */
 main {
   padding: 0 10px;
   max-width: 1300px;
   margin: 0 auto;
 }
+
 /* advertizing */
 
 .promo {
@@ -182,7 +214,8 @@ main {
   border-radius: 30px;
 }
 
-.promo .left-arrow, .promo .right-arrow {
+.promo .left-arrow,
+.promo .right-arrow {
   position: absolute;
   top: 45%;
   width: 10%;
@@ -197,8 +230,9 @@ main {
   left: 3%;
 }
 
-.promo .left-arrow:hover, .promo .right-arrow:hover {
-  background-color: rgba(255,255,255,0.3);
+.promo .left-arrow:hover,
+.promo .right-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* categories */
@@ -223,7 +257,6 @@ main {
   .category {
     flex: 0 0 21%;
   }
-  
 }
 
 .category img {
@@ -256,6 +289,7 @@ main {
   justify-content: start;
   align-items: center;
   overflow: hidden;
+  grid-column-start: span 2;
 }
 
 .hot-item {
@@ -307,11 +341,13 @@ main {
   font-size: 2rem;
 }
 
-.hot-item figcaption:hover, .hot-item img:hover {
+.hot-item figcaption:hover,
+.hot-item img:hover {
   cursor: pointer;
 }
 
-.hot-items .left-arrow, .hot-items .right-arrow {
+.hot-items .left-arrow,
+.hot-items .right-arrow {
   position: absolute;
   width: 50px;
   cursor: pointer;
@@ -320,8 +356,9 @@ main {
   transition: all 0.5s ease;
 }
 
-.hot-items .left-arrow:hover, .hot-items .right-arrow:hover {
-  background-color: rgba(255,255,255,0.6);
+.hot-items .left-arrow:hover,
+.hot-items .right-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .hot-items .left-arrow {
@@ -346,7 +383,9 @@ footer svg:hover {
   cursor: pointer;
 }
 
-svg #youtube-color, #vk-color, #telegram {
+svg #youtube-color,
+#vk-color,
+#telegram {
   transition: fill 0.5s ease;
   fill: grey;
 }
@@ -379,7 +418,6 @@ ul.info {
   padding: 0 10px;
   text-transform: uppercase;
   color: white;
-
 }
 
 ul.info li {
@@ -422,8 +460,7 @@ ul.info li span {
 }
 
 @media (min-width: 700px) {
-
-  ul.info>li {
+  ul.info > li {
     margin: 10px 5%;
   }
 
