@@ -156,35 +156,68 @@ adress {
 /* navigation */
 nav {
   display: none;
+  width: 225px;
+  top: 48px;
+  transition: width 0.5s ease;
+  z-index: 999;
 }
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: end;
+  display: none;
+}
+
+nav ul .back {
+  float: left;
+  display: block;
+  height: 100%;
+  line-height: 35px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+nav ul .back:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+nav ul:first-child {
+  display: unset;
+  text-align: unset;
+
+}
+
+nav ul li {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  transition: all 1s ease;
+  font-size: 1.5em;
+  font-weight: 300;
+  background-color: lightgray;
+}
+
+nav li:hover {
+  background-color: rgb(133, 89, 158);
+  color: white;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 1000px) {
+  .user-menu {
+    display: none;
+  }
+
   nav {
     display: unset;
-    width: 230px;
     grid-row-start: span 2;
+    position: relative;
+    top: 0;
   }
 
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  nav ul li {
-    height: 50px;
-    line-height: 50px;
-    padding-left: 10px;
-    transition: all 1s ease;
-    font-size: 1.5em;
-    font-weight: 300;
-    background-color: lightgray;
-  }
-
-  nav li:hover {
-    background-color: rgb(133, 89, 158);
-    color: white;
-    cursor: pointer;
-  }
+  
 
   main {
     display: grid;
