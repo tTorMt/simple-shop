@@ -191,7 +191,21 @@ function menuStarter() {
 //Footer info code
 
 function footerMenuStarter() {
-  //to do
+  const uls = document.querySelectorAll('.info ul');
+  const spans = document.querySelectorAll('.info span');
+  document.querySelector('.info').addEventListener('click', (event) => {
+    if (event.target.textContent === '+') {
+      for (ul of uls) ul.style.display = '';
+      for (span of spans) span.textContent = '+';
+      event.target.textContent = '-';
+      document.querySelector(`#${event.target.parentNode.id} ul`).style.display = 'unset';
+      return;
+    }
+    if (event.target.textContent === '-') {
+      event.target.textContent = '+';
+      document.querySelector(`#${event.target.parentNode.id} ul`).style.display = '';
+    }
+  });
 }
 
 //Start the scripts
