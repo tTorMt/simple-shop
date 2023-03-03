@@ -75,16 +75,12 @@ function initHotItemsSlide() {
 function menuStarter() {
   const menuButton = document.querySelector(".user-menu");
   const navigation = document.querySelector("nav");
-  const arrOfUls = [];
+  const categories = document.querySelector('.categories');
   let displayed = false; //On button click menu Is displayed?
-  let currentShowedList = 0; //Current showed sublist
-
-  for (node of navigation.childNodes) {
-    if (node.nodeType === Node.ELEMENT_NODE) arrOfUls.push(node);
-  }
+  let currentShowedList = null; //Current showed sublist
   resize();
 
-  //Menu button click
+  //Show and hide menu on button click
   function onMenuClick() {
     if (!displayed) {
       navigation.style.display = "block";
@@ -99,62 +95,67 @@ function menuStarter() {
     }
   }
 
-  //Choose menu entry and show list of sub entryes. Or go back to main list
-
-  function hideList(listNum) {
-    if (listNum === 0) return;
+  //Sublist show and hide
+  function hideList(subList) {
+    if (!subList) return;
     if (menuButton.offsetWidth > 0) {
-      arrOfUls[listNum].style.display = "";
-      arrOfUls[0].style.display = "";
-      currentShowedList = 0;
+      //If menu button is displayed
+
+      subList.style.display = "";
+      categories.style.display = "";
     } else {
-      arrOfUls[listNum].style.display = "";
-      arrOfUls[listNum].style.position = "";
-      arrOfUls[listNum].style.left = "";
-      arrOfUls[listNum].style.top = "";
-      arrOfUls[listNum].style.width = "";
-      currentShowedList = 0;
+      subList.style.display = "";
+      subList.style.position = "";
+      subList.style.left = "";
+      subList.style.top = "";
+      subList.style.width = "";
+      document.querySelector(`#${subList.id} .back`).style.display = "";
     }
+    currentShowedList = null;
   }
 
+  function showList(subList) {
+    if (!subList) return;
+    if (menuButton.offsetWidth > 0) {
+      //if menu button is present
+      categories.style.display = "none";
+      subList.style.display = "unset";
+    } else {
+      //if menu button not present
+      subList.style.display = "unset";
+      subList.style.position = "absolute";
+      subList.style.left = "225px";
+      subList.style.top = "0";
+      subList.style.width = "225px";
+      document.querySelector(`#${subList.id} .back`).style.display = "none";
+    }
+    currentShowedList = subList;
+  }
+
+  //Choose menu entry and show list of sub entryes. Or go back to main list
   function onMenuChoose(event) {
     event.stopPropagation();
-    switch (event.target.textContent) {
-      case "Смартфоны":
-        {
-          arrOfUls[0].style.display = "none";
-          arrOfUls[1].style.display = "unset";
-          currentShowedList = 1;
-        }
-        break;
-      case "<":
-        {
-          hideList(currentShowedList);
-        }
-        break;
+    if (event.target.getAttribute("class") === "back") {
+      hideList(currentShowedList);
+      return;
     }
+    const subList = document.querySelector(`#${event.target.id}-sub`);
+    showList(subList);
   }
 
   function onMenuEntryHover(event) {
-    switch (event.target.textContent) {
-      case "Смартфоны": {
-        hideList(currentShowedList);
-        arrOfUls[1].style.display = "unset";
-        arrOfUls[1].style.position = "absolute";
-        arrOfUls[1].style.left = "225px";
-        arrOfUls[1].style.top = "0";
-        arrOfUls[1].style.width = "225px";
-        currentShowedList = 1;
-      }
+    if (categories.contains(event.target)) {
+      const subList = document.querySelector(`#${event.target.id}-sub`);
+      hideList(currentShowedList);
+      showList(subList);
     }
   }
 
   //If window resized go to main list entries and hide menu
   function resize() {
     hideList(currentShowedList);
-    arrOfUls[0].style.display = "";
+    categories.style.display = "";
     if (displayed) onMenuClick();
-    for (ul of arrOfUls) ul.style.display = "";
     if (menuButton.offsetWidth > 0) {
       navigation.addEventListener("click", onMenuChoose);
       navigation.removeEventListener("mouseover", onMenuEntryHover);
@@ -187,8 +188,15 @@ function menuStarter() {
   });
 }
 
+//Footer info code
+
+function footerMenuStarter() {
+  //to do
+}
+
 //Start the scripts
 
 menuStarter();
+footerMenuStarter();
 initHotItemsSlide();
 initPromoSlider();
